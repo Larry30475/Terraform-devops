@@ -3,10 +3,10 @@ name: Terraform CI/CD
 on:
   pull_request:
     branches: [ master ]
+  workflow_dispatch:
 
 env:
   AWS_REGION: us-east-1
-  TF_WORKING_DIR: terraform
 
 jobs:
   terraform-check:
