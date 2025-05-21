@@ -2,7 +2,7 @@ name: Terraform CI/CD
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
   workflow_dispatch:
 
 env:
@@ -40,7 +40,7 @@ jobs:
     name: Terraform Apply (with approval)
     needs: terraform-check
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/master'
     environment:
       name: production
       url: https://aws.amazon.com
